@@ -7,9 +7,9 @@ import (
 )
 
 type state struct {
-	name string
+	name   string
 	enters int
-	exits int
+	exits  int
 }
 
 func (s *state) OnEnter() {
@@ -54,6 +54,7 @@ var char string
 type beforeState struct {
 	res *string
 }
+
 func (s *beforeState) Name() string {
 	return "before"
 }
@@ -65,15 +66,17 @@ func (s *beforeState) OnExit() {
 type insideState struct {
 	res *string
 }
+
 func (s *insideState) Name() string {
 	return "inside"
 }
 func (s *insideState) OnEnter() {}
-func (s *insideState) OnExit() {}
+func (s *insideState) OnExit()  {}
 
 type afterState struct {
 	res *string
 }
+
 func (s *afterState) Name() string {
 	return "after"
 }

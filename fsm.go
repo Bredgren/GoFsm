@@ -14,7 +14,7 @@ type State interface {
 }
 
 type Fsm struct {
-	CurrentState State
+	CurrentState  State
 	PreviousState State
 }
 
